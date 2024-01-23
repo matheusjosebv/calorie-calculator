@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calorie Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
   </head>
@@ -18,7 +24,7 @@
           <option value="female">Female</option>
         </select>
       </div>
-      <div class="age">
+      <div class="age field">
         <label for="age">Age: </label>
         <input
           type="text"
@@ -30,7 +36,7 @@
           required
         />
       </div>
-      <div class="height">
+      <div class="height field">
         <label for="height">Height: </label>
         <input
           type="text"
@@ -42,7 +48,7 @@
           required
         />
       </div>
-      <div class="weight">
+      <div class="weight field">
         <label for="weight">Weight: </label>
         <input
           type="text"
@@ -54,7 +60,7 @@
           required
         />
       </div>
-      <div class="activity">
+      <div class="activity field">
         <label for="activity">Activity: </label>
         <select name="activity" id="activity" required>
           <option value="1.2">Sedentary (office job)</option>
@@ -65,7 +71,10 @@
         </select>
       </div>
 
-      <button type="submit" id="submit">Calculate</button>
+      <div class="btn-container">
+        <button class="btn calculate-btn" type="submit">Calculate</button>
+        <button class="btn reset-btn" onclick="resetForm()">Reset</button>
+      </div>
     </form>
 
     <div id="result"></div>

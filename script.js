@@ -5,6 +5,8 @@ const height = document.getElementById("height");
 const weight = document.getElementById("weight");
 const activity = document.getElementById("activity");
 const resultDiv = document.getElementById("result");
+const calculateBtn = document.getElementsByClassName("calculate-btn");
+const resetBtn = document.getElementsByClassName("reset-btn");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -19,4 +21,10 @@ form.addEventListener("submit", (e) => {
   }
 
   resultDiv.innerText = Math.round(result);
+  calculateBtn.innerText = "Re-Calculate";
 });
+
+function resetForm() {
+  form.reset();
+  resultDiv.innerText = "";
+}
